@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Book Library</title>
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+</head>
+<body>
+   <!-- body overlay -->
+   <div class="body-blackout"></div>
+   <div id="app">
+      <div class="container">
+         <h1>Books Library</h1>
+         <div class="book-container">
+            <table style="width:100%" id="table-container">
+               <tr>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>Pages</th>
+                  <th>Status</th>
+                  <th></th>
+               </tr>
+               <tr>
+                  <td>Jill</td>
+                  <td>Smith</td>
+                  <td>50</td>
+                  <td><button class="btn btn-readed">Read</button></td>
+                  <td><button class="btn btn-primary">delete</button></td>
+               </tr>
+               <tr>
+                  <td>Eve</td>
+                  <td>Jackson</td>
+                  <td>94</td>
+                  <td><button class="btn btn-readed">Read</button></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>Eve</td>
+                  <td>Jackson</td>
+                  <td>94</td>
+                  <td><button class="btn btn-unread">Unread</button></td>
+                  <td></td>
+               </tr>
+            </table>
+            <!-- Modals Triggers -->
+            <button class="btn btn-primary popup-trigger" data-popup-trigger="one" style="margin-top: 5px;">Add Book &#8692;</button>
+            <!-- Modals -->
+            <div class="popup-modal shadow" data-popup-modal="one">
+               <i class="text-white bg-primary p-3 popup-modal__close">&#10006;</i>
+               <h2 class="font-weight-bold">
+                  Add New Book
+               </h2>
+               <div class="container">
+                  <form action="">
+                  <div class="row">
+                     <div class="col-25">
+                        <label for="title">Title</label>
+                     </div>
+                     <div class="col-75">
+                        <input type="text" id="title" name="title" placeholder="The Hobbit">
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-25">
+                        <label for="author">Author</label>
+                     </div>
+                     <div class="col-75">
+                        <input type="text" id="author" name="author" placeholder="J.R.R Tolkien">
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-25">
+                        <label for="pages">Pages</label>
+                     </div>
+                     <div class="col-75">
+                        <input type="text" id="pages" name="pages" placeholder="295">
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-25">
+                        <label for="author">Has read?</label>
+                     </div>
+                     <div class="col-75" style="display: inline;">
+                        <input type="radio" name="read" id="readed" value="true" checked> <label for="readed">Read</label><br>
+                        <input type="radio" name="read" id="unreaded" value="false"> <label for="unreaded">unRead</label><br>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <input class="btn btn-primary" style="margin-top: 5px;" type="submit" value="Submit">
+                  </div>
+                  </form>
+                  <!--  author, title, number of pages, whether it’s been read and anything else you might want. -->
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="assets/js/script.js"></script>
+</body>
+</html>
